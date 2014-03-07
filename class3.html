@@ -15,11 +15,11 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+		<link rel="stylesheet" href="reveal/css/theme/gdicool.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+		<!-- light editor--><link rel="stylesheet" href="lib/css/light.css">
+		<!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 
 		<!-- If use the PDF print sheet so students can print slides-->
 		
@@ -44,7 +44,7 @@
         </section>
         
         <!-- Welcome-->
-        <section>
+       <!--  <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
           <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
@@ -56,9 +56,9 @@
             <li>Have fun</li>
           </ul>
           </div>
-        </section>
+        </section> -->
         
-         <section>
+         <!-- <section>
         	<h3>What we'll be making today</h3>
         	<div class="left" style="width: 45%;">
         		<p>Today we will be making a site from scratch using divs and spans to create a header, footer, sidebar and a content area.</p>
@@ -66,29 +66,53 @@
         	<div class="right" style="width: 45%;">
         		<img src="images/session2site.png">
         	</div>
+        </section> -->
+        <!-- Pseudo class-->
+        <section>
+          <h3>Pseudo-classes, more CSS for links</h3>
+          <div class ="left left-align" style="width:50%">
+          <p>Changing the format of a link when you hover over it is accomplished by using pseudo-classes.</p>
+          <br/>
+          <p>CSS pseudo-classes are used to add special effects to some selectors.</p>
+          </div>
+          Syntax: 
+<pre><code class ="html">
+selector:pseudo-class
+{
+  property:value; 
+}
+</code></pre>
+          Example:
+<pre><code class ="html">
+a:link
+{
+  text-decoration: none;
+}
+</code></pre>
         </section>
         
-        <!-- Inline vs. block-->
+        <!-- Pseudo class-->
         <section>
-          <h3>Inline vs Block</h3>
-          <div class = "left" style="width: 50%; text-align: left;">
-            <div class = "fragment">
-              <p>So far, we have mostly seen <span class="green">"block"</span> elements</p>
-              <p>They appear on the next line, like paragraphs</p>
-            </div> 
-            <br/><br/>
-            <div class = "fragment">
-              <p>There are also <span class="green">"inline"</span> elements</p>
-              <p>They appear on the same line that they are written on.</p>
-            </div>
-          </div>
-          <div class="right fragment">
-          	<img src="images/example-blockinline.png" alt="example of inline and block elements" />
-          </div>
+          <h3>Pseudo-classes, more CSS for links</h3>
+<pre><code class ="html">
+  a:link  {color:#FF0000;} /* unvisited link */
+  a:visited {color:#00FF00;} /* visited link */
+  a:hover {color:#FF00FF;} /* mouse over link */
+  a:active  {color:#0000FF;} /* selected link */
+</code></pre>
+          <p>Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective!</p>
+          <p>Note: a:active MUST come after a:hover in the CSS definition in order to be effective!</p>
         </section>
-        <!-- Inline v block again-->
+       
+        <!-- Exercise-->
         <section>
-          <h3>Block &amp; Inline Elements,</h3>
+          <h3>Let's Develop It</h3>
+          <p>Add pseudo classes to your links</p>
+        </section>
+        
+         <!-- Inline v block again-->
+        <section>
+          <h3>Block &amp; Inline Elements Review</h3>
           <ul>
             <li>CSS divides HTML into two types: inline and block.</li>
             <li>After block elements, browsers render a new line.</li>
@@ -96,6 +120,25 @@
             <li>Block elements: p, h1, ul, li, almost everything else</li>
           </ul>
         </section>
+        <!-- Inline vs. block-->
+      <section>
+          <h3>Inline vs Block</h3>
+          <div class = "left" style="width: 50%; text-align: left;">
+            <div>
+              <p>So far, we have mostly seen <span class="green">"block"</span> elements</p>
+              <p>They appear on the next line, like paragraphs</p>
+            </div> 
+            <br/><br/>
+            <div>
+              <p>There are also <span class="green">"inline"</span> elements</p>
+              <p>They appear on the same line that they are written on.</p>
+            </div>
+          </div>
+          <div class="right">
+          	<img src="images/example-blockinline.png" alt="example of inline and block elements" />
+          </div>
+        </section>
+       
         <section> 
         	<h3>Element: Div</h3>
         		<ul>
@@ -189,48 +232,7 @@
           <h3>Let's Develop It</h3>
          <p>Let's add some spans to our content to help highlight some text. </p>
         </section>      
-        <!-- Pseudo class-->
-        <section>
-          <h3>Pseudo-classes, more CSS for links</h3>
-          <div class ="left left-align" style="width:50%">
-          <p>Changing the format of a link when you hover over it is accomplished by using pseudo-classes.</p>
-          <br/>
-          <p>CSS pseudo-classes are used to add special effects to some selectors.</p>
-          </div>
-          Syntax:	
-<pre><code class ="html">
-selector:pseudo-class
-{
-  property:value;	
-}
-</code></pre>
-          Example:
-<pre><code class ="html">
-a:link
-{
-  text-decoration: none;
-}
-</code></pre>
-        </section>
         
-        <!-- Pseudo class-->
-        <section>
-          <h3>Pseudo-classes, more CSS for links</h3>
-<pre><code class ="html">
-  a:link	{color:#FF0000;} /* unvisited link */
-  a:visited	{color:#00FF00;} /* visited link */
-  a:hover	{color:#FF00FF;} /* mouse over link */
-  a:active	{color:#0000FF;} /* selected link */
-</code></pre>
-          <p>Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective!</p>
-          <p>Note: a:active MUST come after a:hover in the CSS definition in order to be effective!</p>
-        </section>
-       
-        <!-- Exercise-->
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Add pseudo classes to your links</p>
-        </section>
         
         <!-- Box model-->
         <section>

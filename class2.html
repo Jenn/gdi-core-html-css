@@ -15,7 +15,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+		<link rel="stylesheet" href="reveal/css/theme/gdicool.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
@@ -44,7 +44,7 @@
         </section>
         
         <!-- Welcome-->
-        <section class="hide-pdf">
+        <!-- <section class="hide-pdf">
           <h3>Welcome!</h3>
           <div class = "left-align">
           <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
@@ -56,7 +56,7 @@
             <li>Have fun</li>
           </ul>
           </div>
-        </section>
+        </section> -->
         
         <!-- Role of HTML v. CSS-->
         <section>
@@ -88,10 +88,7 @@
         </section>
         
         <!-- The CSS Rule-->
-        <section>
-        	<h3>The CSS Rule</h3>
-        	<img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;"/>
-        </section>
+       
         <section>
           <h3>The CSS Rule</h3>
 <pre><code class = "html">
@@ -105,6 +102,11 @@ selector {
             <p>It has sets of properties and values.</p>
             <p>A property-value pair is a declaration.</p>
           </div>
+        </section>
+
+         <section>
+          <h3>The CSS Rule</h3>
+          <img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;"/>
         </section>
         
         <!-- CSS Syntax -->
@@ -189,7 +191,7 @@ img {
       
         <!-- Selector position-->
         <section>
-        <h3>Selector: Position</h3>
+        <h3>Selector: Descendant</h3>
 <pre><code class = "html">
 p em {
   color: yellow;
@@ -202,18 +204,6 @@ p em {
         <p>The associated HTML.</p>
       </section>
         
-        <!-- Multiple values -->
-        <section>
-        <h3>Property Values</h3>
-        <p>Each property can have one or more comma separated values.</p>
-<pre><code class = "html">
-p{
-  color: white;
-  background-color: red;
-  font-family: Arial, sans-serif;
-}
-</code></pre>
-      </section>
         
         <!-- Color-->
         <section>
@@ -245,6 +235,20 @@ p {
 }
 </code></pre>
         </section>
+
+        <!-- Multiple values -->
+        <section>
+        <h3>Property Values</h3>
+        <p>Each property can have one or more comma separated values.</p>
+<pre><code class = "html">
+p{
+  color: white;
+  background-color: red;
+  font-family: helvetica, arial, sans-serif;
+}
+</code></pre>
+<p>We can provide a fallback font by declaring a font stack within our CSS. This way, if one font doesn't load, we can define a back-up font.</p>
+      </section>
       
         <!-- Font family-->
         <section>
@@ -271,11 +275,26 @@ p {
   font-size: 12px;
   font-size: 1.5em;
   font-size: 100%;
+  font-size: large;
 }
 </code></pre>
           <p>Pixels</p>
-          <p>"em"</p>
+          <p>Em</p>
           <p>Percentage</p>
+          <p>Keyword</p>
+        </section>
+
+        <!-- Font weight and style -->
+        <section>
+          <h3>Property: font-weight and font-style</h3>
+          <p>We can set the weight/thickness of a font as well as setting a font to be italicized.</p>
+          
+<pre><code class = "html">
+p {
+  font-weight: bold;
+  font-style: italic;
+}
+</code></pre>
         </section>
         
         <!-- Fonts-->
@@ -330,6 +349,7 @@ p {
   &lt;/style>
 &lt;/head>
 </code></pre>
+          <p>Also called "internal stylesheet".</p>
           <p>Inside &lt;head> element.</p>
           <p>Uses &lt;style> tag.</p>
           <p>Can only be used in one html file</p>
@@ -337,7 +357,7 @@ p {
         
         <!-- External-->
         <section>
-          <h3>Connecting CSS to HTML: Linked</h3>
+          <h3>Connecting CSS to HTML: External Stylesheet</h3>
 <pre><code class = "html">
 &lt;head>
   &lt;link rel="stylesheet" type="text/css" href="style.css">
@@ -354,8 +374,8 @@ p {
           <h3>Let's develop it</h3>
           <ul>
             <li>Create a new .css file</li>
-            <li>Add a link to the file in the head of the portfolio made last time</li>
-            <li>Add styles to change the colors, background colors or fonts of different parts of </li>
+            <li>Add a link to the file in the head of the resume HTML file made last time</li>
+            <li>Add styles to change the colors, background colors or fonts of different parts of our page.</li>
             <li>Try using ids and classes to change specific elements</li>
           </ul>
         </section>
@@ -379,10 +399,85 @@ p{
 
 <pre><code class = "html">
   &lt;p>Paragraph&lt;/p>
-  &lt;p class ="green">Paragraph&lt;/p>
-  &lt;p class ="red">Paragraph&lt;/p>
-  &lt;p class = "red" id ="special">Paragraph&lt;/p>
+  &lt;p class="green">Paragraph&lt;/p>
+  &lt;p class="red">Paragraph&lt;/p>
+  &lt;p class="red" id="special">Paragraph&lt;/p>
 </code></pre>
+        </section>
+
+        <!-- Text Styles -->
+        <section>
+          <h3>Text Styles</h3>
+          <p>We can control additional aspects of our type with more CSS properties</p>
+          
+<pre><code class = "html">
+p {
+  text-align: middle;
+  text-decoration: overline;
+  text-transform: uppercase;
+  text-indent: 30px;
+}
+</code></pre>
+        </section>
+
+         <!-- Text Styles -->
+        <section>
+          <h3>Advanced Text Control</h3>
+          <p>We can adjust our paragraph styles for better legibility.</p>
+          
+<pre><code class = "html">
+p {
+  line-height: 1.5;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+</code></pre>
+        </section>
+
+        <!-- List Styles -->
+        <section>
+          <h3>List Style</h3>
+          <p>By default, our UL and OL have bullets and numbers. We can override those with the list-style-type property.</p>
+          
+<pre><code class = "html">
+ul li {
+  list-style-type: square;
+}
+
+ol li {
+  list-style-type: lower-roman;
+}
+</code></pre>
+        </section>
+
+         <!-- Background Image -->
+        <section>
+          <h3>Background Image</h3>
+          <p>We can set the background of our page or elements to more than just a solid color using our background properties.</p>   
+          
+<pre><code class = "html">
+body {
+  background-color: blue;
+  background-image: url(image.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+body {
+  background: blue url(image.jpg) no-repeat center center;
+}
+</code></pre>
+        </section>
+
+        <!-- Exercise-->
+        <section class="hide-pdf">
+          <h3>Let's develop it</h3>
+          <ul>
+            <li>Try centering text with text-align</li>
+            <li>Adjust the line-height of your paragraphs</li>
+            <li>Change bullet styles of a list</li>
+            <li>Add a background image to your page</li>
+          </ul>
         </section>
       
         <!-- Properties-->
@@ -397,7 +492,7 @@ p{
             <li>width</li>
             <li>height</li>
           </ul>
-          <p><a href = "https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference">Comprehensive list of all CSS properties</a></p>
+          <p><a href = "http://www.htmldog.com/reference/cssproperties/">Comprehensive list of all CSS properties</a></p>
         </section>
         
        <!-- Question-->
