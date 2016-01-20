@@ -1,3 +1,8 @@
+# CORE  HTML/CSS - Lukas updates
+
+Timing and locality led to me tweaking the order and content to better fit the Philadelphia class needs. 
+TODO: for me to reexamine the current branch of the core and see differences. 
+
 # CORE  HTML/CSS
 
 This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
